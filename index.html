@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>音乐可视化Demo</title>
+    </head>
+    <body>
+        <header class="mdc-top-app-bar shadow-sm">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons-round mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+                    <span class="mdc-top-app-bar__title">music-chart</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                    <button class="material-icons-round mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+                    <button class="material-icons-round mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+                    <button class="material-icons-round mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+                </section>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+                    <div class="mdc-card main-card m-4">
+                        <div id="main"></div>
+                    </div>
+                    <div class="mdc-card m-4 p-3 d-inline-block">
+                        <p class="lead text-center" id="musicName">Refrain.mp3</p>
+                        <input type="file" id="file" οnchange="onInputFileChange()" style="display:none">
+                        <audio controls id="audio" class="m-auto" src="../src/music/Refrain.mp3"></audio>
+                    </div>
+                </div>
+            </div>
+            <button id="refreshBt" class="mdc-fab" aria-label="folder_open">
+                <div class="mdc-fab__ripple"></div>
+                <span class="mdc-fab__icon material-icons-round">folder_open</span>
+            </button>
+        </div>
+
+    </body>
+</html>
